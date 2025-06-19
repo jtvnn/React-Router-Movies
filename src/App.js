@@ -37,11 +37,9 @@ export default function App() {
     <div>
       <SavedList list={movies.filter(movie => saved.includes(movie.id))} />
 
-
-
       <Routes>
         <Route path='/' element={<MovieList movies={movies} />} />
-        <Route path='movies/:id' element={<Movie addToSavedList={addToSavedList}/>} />
+        <Route path='movies/:id' element={<Movie addToSavedList={addToSavedList} />} />
       </Routes>
     </div>
   );
